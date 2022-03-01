@@ -1,1 +1,51 @@
 // Specific CSS for your home-page
+body {
+  background-color: #9b9ae5;
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  color: white;
+  font-weight: 500;
+}
+
+.heading-div {
+  // background-color: red;
+  width: 215px;
+  text-align: center;
+  margin-left: 75px;
+  margin-top: 45px;
+}
+
+.form-div {
+  margin-top: 25px;
+}
+
+.address-input {
+  border: none;
+  border-radius: 5px;
+  background-color: #dedaf3;
+  color: black;
+  text-align: center;
+  padding: 8px;
+  width: 300px;
+  height: 45px;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  background-color: #dedaf3;
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px;
+  margin-left: 180px;
+}
+
+.card {
+  background-color: navy;
+  border: 2px solid red;
+  color: white;
+  padding: 2px;
+  border: 15px;
+}
