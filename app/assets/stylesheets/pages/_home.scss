@@ -1,1 +1,98 @@
 // Specific CSS for your home-page
+body {
+  background-color: #9b9ae5;
+  font-family: "Montserrat", sans-serif;
+  background: url(Homepage.png);
+  // background-size: 395px;
+  background-repeat: no-repeat;
+  background-size: 395px 845px;
+}
+
+// .container {
+//   background-color: red;
+// }
+
+.img-div {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.heading-div {
+  // background-color: red;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+label {
+  margin-bottom: 95px;
+}
+
+.address-input {
+  border: none;
+  border-radius: 5px;
+  background-color: #dedaf3;
+  color: black;
+  text-align: center;
+  padding: 8px;
+  width: 300px;
+  height: 45px;
+}
+
+.filter-div {
+  margin-top: 100px;
+}
+
+.row {
+  width: 330px;
+  grid-gap: 15px;
+}
+.card {
+  border-radius: 15px;
+  color: white;
+  padding: 2px;
+  width: 100px;
+  height: 100px;
+}
+
+.card img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card h2 {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+}
+
+.card:hover {
+  border: 2px solid black;
+  background-color: rgb(249, 171, 54);
+  transition: 0.3s ease;
+}
+.card h2:hover {
+  color: white;
+  transition: 0.3s ease;
+}
+
+.button-div {
+  padding-top: 90px;
+}
+
+.button {
+  border: none;
+  border-radius: 4px;
+  background-color: #dedaf3;
+  color: black;
+  font-size: 15px;
+  padding: 8px;
+  height: 40px;
+  text-align: center;
+  width: 200px;
+}
