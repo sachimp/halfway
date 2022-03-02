@@ -1,6 +1,16 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
+      <div class="home-search">
+        <%= form_tag megaliths_path, class:"d-flex", method:"get" do %>
+          <div id="geocoder"></div>
+          <%= hidden_field_tag :query, nil, id: "geocoder-query" %>
+          <%= submit_tag "Go", class:"btn btn-secondary go-btn" %>
+        <% end %>
+      </div>
+
+
+
 <p>footer</p>
 <div class="footer">
   <div class="footer-links">
