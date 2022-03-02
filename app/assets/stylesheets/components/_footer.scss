@@ -1,10 +1,21 @@
 .footer {
   background: #8A89CB;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
+
+.footer i {
+  color: white;
+}
+
 .footer-links {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 10px 10px;
-  font-size: 24px;
+  font-size: 36px;
 }
