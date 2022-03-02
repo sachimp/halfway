@@ -1,24 +1,52 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<div class="home-search">
-  <%= form_tag venues_path, class:"d-flex", method:"get" do %>
-    <div id="geocoder"></div>
-    <%= hidden_field_tag :query, nil, id: "geocoder-query" %>
-    <%= submit_tag "Go", class:"btn btn-secondary go-btn" %>
-  <% end %>
- </div>
-
-
-
-<p>footer</p>
-<div class="footer">
-  <div class="footer-links">
-    <a href="home_path"><i class="fa-thin fa-house-blank"></i></a>
-    <a href="search"><i class="fa-thin fa-compass"></i></a>
-    <a href="favourites"><i class="fa-thin fa-heart"></i></a>
-    <a href="users"><i class="fa-thin fa-user"></i></a>
+<div class="container">
+  <div class="img-div text-center">
+ <%= image_tag "halfway_logo.png" %>
   </div>
-  <i class="fa-brands fa-instagram"></i>
-  <i class="fa-brands fa-whatsapp"></i>
+  <div class="heading-div">
+    <h1>Enter your addresses to meet halfway!</h1>
+  </div>
+    <div class="form-div d-flex justify-content-center">
+      <form>
+        <label for="Address One"></label>
+        <input class="address-input" type="text" placeholder="Address One"><br><br>
+        <label for="Address Two"></label>
+        <input class="address-input"type="text" placeholder="Address Two"><br><br>
+      </form>
+    </div>
+
+    <div class="filter-div">
+      <div class="row mx-auto">
+            <div class="card col-md mb-2">
+                <%# <img src="https://unsplash.com/photos/nzyzAUsbV0M" alt=""> %>
+                <h2>Coffee</h2>
+            </div>
+
+            <div class="card col-md mb-2">
+                <h2>Drinks</h2>
+            </div>
+
+              <div class="card col-md mb-2">
+                <h2>Food</h2>
+            </div>
+
+            <div class="card col-md mb-2">
+                <h2>Clubs</h2>
+            </div>
+
+            <div class="card col-md mb-2">
+                <h2>Cinemas</h2>
+            </div>
+
+            <div class="card col-md mb-2">
+                <h2>Parks</h2>
+            </div>
+
+
+      </div>
+    </div>
+
+  <div class="button-div text-center">
+  <button class="button" type="button">Meet Halfway!</button>
+  </div>
+
 </div>
