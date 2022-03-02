@@ -6,18 +6,17 @@ body {
 h1 {
   color: white;
   font-weight: 500;
+  font-size: 18px;
 }
 
+// .container {
+//   background-color: red;
+// }
 .heading-div {
   // background-color: red;
-  width: 215px;
   text-align: center;
-  margin-left: 75px;
   margin-top: 45px;
-}
-
-.form-div {
-  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 .address-input {
@@ -33,19 +32,51 @@ h1 {
 
 .button {
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #dedaf3;
   color: black;
-  font-size: 15px;
   text-align: center;
   padding: 8px;
-  margin-left: 180px;
+  margin-right: auto;
+  height: 30px;
+  font-size: 15px;
 }
 
+.filter-div {
+  margin-top: 35px;
+}
+
+.row {
+  width: 330px;
+  grid-gap: 15px;
+}
 .card {
-  background-color: navy;
-  border: 2px solid red;
+  border-radius: 15px;
   color: white;
   padding: 2px;
-  border: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+.card img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card h2 {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+}
+
+.card:hover {
+  border: 2px solid black;
+  background-color: rgb(249, 171, 54);
+  transition: 0.3s ease;
+}
+.card h2:hover {
+  color: white;
+  transition: 0.3s ease;
 }
