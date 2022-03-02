@@ -2,21 +2,33 @@
 body {
   background-color: #9b9ae5;
   font-family: "Montserrat", sans-serif;
-}
-h1 {
-  color: white;
-  font-weight: 500;
-  font-size: 18px;
+  background: url(Homepage.png);
+  // background-size: 395px;
+  background-repeat: no-repeat;
+  background-size: 395px 845px;
 }
 
 // .container {
 //   background-color: red;
 // }
+
+.img-div {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 .heading-div {
   // background-color: red;
   text-align: center;
-  margin-top: 45px;
-  margin-bottom: 10px;
+}
+
+h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+label {
+  margin-bottom: 95px;
 }
 
 .address-input {
@@ -30,20 +42,8 @@ h1 {
   height: 45px;
 }
 
-.button {
-  border: none;
-  border-radius: 4px;
-  background-color: #dedaf3;
-  color: black;
-  text-align: center;
-  padding: 8px;
-  margin-right: auto;
-  height: 30px;
-  font-size: 15px;
-}
-
 .filter-div {
-  margin-top: 35px;
+  margin-top: 100px;
 }
 
 .row {
@@ -79,4 +79,20 @@ h1 {
 .card h2:hover {
   color: white;
   transition: 0.3s ease;
+}
+
+.button-div {
+  padding-top: 90px;
+}
+
+.button {
+  border: none;
+  border-radius: 4px;
+  background-color: #dedaf3;
+  color: black;
+  font-size: 15px;
+  padding: 8px;
+  height: 40px;
+  text-align: center;
+  width: 200px;
 }
