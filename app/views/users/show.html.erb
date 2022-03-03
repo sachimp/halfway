@@ -5,7 +5,7 @@
     <div class="user-info">   
         <img class="avatar-large" alt="avatar-large" src="https://organicheadshots.com/wp-content/uploads/2021/03/square_headshottips.jpg" /> 
         <div class="user-details">
-            <h3>nazik_77</h3>
+            <h3>Lucy_89</h3>
             <h2>Kings Cross</h2>
         </div>
     </div>
@@ -39,22 +39,26 @@
          <h3>Activity</h3>
     </div>
 
-    <div class="activity-card">
-       <div>
-            <img class="avatar" alt="avatar" src="https://cricketfeet.com/temp/showfax/002asicropped.jpg" width="30%"/>
-            <p>Katy</p>
-            <p>⭐️⭐️⭐️⭐️⭐️</p>
-            <p>great place for a catch up</p>
-        </div>
-
+   <div class="cards-container">
+        <% @venues.all.each do |venue| %>
         <div class="card-product">
-            <img src=""/>
+            <img src="https://www.brian-coffee-spot.com/wp-content/uploads/2020/04/Thumbnail-Kanazawaya-Coffee-Shop-Head-Office-DSC_0709t.jpg"/>
             <div class="card-product-infos">
-            <h2>Product name</h2>
-            <p>Product description with <strong>relevant info</strong> only.</p>
+            <h2><%= venue.name %></h2>
+            <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
+                <div class="d-flex justify-content-between">
+                <p><%= "⭐️" * (venue.rating || 0) %></p>
+                <div class="d-flex justify-content-right">
+                <i class="fas fa-share-square big-icon"></i>
+                <i class="far fa-heart big-icon"></i>
+                </div>
+            </div>
+            </div>
         </div>
-    </div>
+        <% end %>
+        </div>
 
 
     </div>
     </div>
+
