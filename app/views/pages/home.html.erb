@@ -5,6 +5,18 @@
   <div class="heading-div">
     <h1>Enter your addresses to meet halfway!</h1>
   </div>
+
+<div class="form-div d-flex justify-content-center">
+  <%= form_with url: venues_path, method: :get do |form| %>
+    <%= form.text_field :address1, placeholder: "Address One"%>
+    <%= form.text_field :address2, placeholder: "Address Two"%>
+    <%= form.submit %>
+  <% end  %>
+</div>
+
+
+
+
     <div class="form-div d-flex justify-content-center">
       <form>
         <label for="Address One"></label>
