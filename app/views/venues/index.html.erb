@@ -11,8 +11,14 @@
   <img src=""/>
   <div class="card-product-infos">
     <h2><%= venue.name %></h2>
-    <p><%= venue.address %></p>
-    <p>rating: <%=venue.rating%>/5</p>
+    <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
+    <div class="d-flex justify-content-between">
+     <p>rating: <%=venue.rating%>/5</p>
+      <div class="d-flex justify-content-between">
+       <i class="fas fa-share-square big-icon"></i>
+       <i class="far fa-heart big-icon"></i>
+      </div>
+    </div>
   </div>
 </div>
 <% end %>
