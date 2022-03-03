@@ -8,5 +8,9 @@ class VenuesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { venue: venue })
       }
     end
+
+    def show 
+       @venue = Venue.find(params[:id])
+    end
   end
 end
