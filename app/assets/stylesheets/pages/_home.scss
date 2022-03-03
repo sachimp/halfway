@@ -5,12 +5,8 @@ body {
   background: url(Homepage.png);
   // background-size: 395px;
   background-repeat: no-repeat;
-  background-size: 395px 845px;
+  background-size: 395px 770px;
 }
-
-// .container {
-//   background-color: red;
-// }
 
 .img-div {
   margin-top: 50px;
@@ -28,61 +24,40 @@ h1 {
 }
 
 label {
-  margin-bottom: 95px;
+  margin-bottom: 45px;
 }
 
 .address-input {
   border: none;
   border-radius: 5px;
   background-color: #dedaf3;
-  color: black;
   text-align: center;
   padding: 8px;
   width: 300px;
   height: 45px;
+  opacity: 85%;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 .filter-div {
-  margin-top: 100px;
+  margin-top: 35px;
 }
 
 .row {
   width: 330px;
   grid-gap: 15px;
 }
-.card {
-  border-radius: 15px;
-  color: white;
-  padding: 2px;
-  width: 100px;
-  height: 100px;
-}
-
-.card img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-}
-
-.card h2 {
-  color: black;
-  font-size: 20px;
-  text-align: center;
-  height: 50px;
-}
-
-.card:hover {
-  border: 2px solid black;
-  background-color: rgb(249, 171, 54);
-  transition: 0.3s ease;
-}
-.card h2:hover {
-  color: white;
-  transition: 0.3s ease;
-}
 
 .button-div {
-  padding-top: 90px;
+  margin-top: 40px;
 }
 
 .button {
