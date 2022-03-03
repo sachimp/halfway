@@ -11,6 +11,7 @@
 
 <div class="cards-container">
   <% @venues.all.each do |venue| %>
+<<<<<<< HEAD
   <div class="card-product">
     <img src="https://www.brian-coffee-spot.com/wp-content/uploads/2020/04/Thumbnail-Kanazawaya-Coffee-Shop-Head-Office-DSC_0709t.jpg"/>
     <div class="card-product-infos">
@@ -21,9 +22,23 @@
         <div class="d-flex justify-content-right">
           <i class="fas fa-share-square big-icon"></i>
           <i class="far fa-heart big-icon"></i>
+=======
+    <%= link_to venue_path(venue) do %>
+    <div class="card-product">
+      <img src="https://www.brian-coffee-spot.com/wp-content/uploads/2020/04/Thumbnail-Kanazawaya-Coffee-Shop-Head-Office-DSC_0709t.jpg"/>
+      <div class="card-product-infos">
+        <h2><%= venue.name %></h2>
+        <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
+          <div class="d-flex justify-content-between">
+          <p><%= "⭐️" * (venue.rating || 0) %></p>
+          <div class="d-flex justify-content-right">
+            <i class="fas fa-share-square big-icon"></i>
+            <i class="far fa-heart big-icon"></i>
+          </div>
+>>>>>>> master
         </div>
       </div>
     </div>
-  </div>
+    <% end %>
   <% end %>
 </div>
