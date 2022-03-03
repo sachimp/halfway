@@ -23,6 +23,13 @@ class VenuesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { venue: venue })
       }
     end
+
+    @markers.push({
+      halfway: true,
+      lat: @halfway_coordinates.first,
+      lng: @halfway_coordinates.last,
+      info_window: render_to_string(partial: "halfway_window", locals: { venue: @halfway_coordinates })
+      })
   end
 
   def show
