@@ -1,0 +1,64 @@
+
+<div class="profile-container">
+    <div class="container-light"> 
+    
+    <div class="user-info">   
+        <img class="avatar-large" alt="avatar-large" src="https://organicheadshots.com/wp-content/uploads/2021/03/square_headshottips.jpg" /> 
+        <div class="user-details">
+            <h3>Lucy_89</h3>
+            <h2>Kings Cross</h2>
+        </div>
+    </div>
+    <div>
+      <h3>Friends</h3>
+    </div>
+
+    <div class="d-flex justify-content-between "> 
+        <div>
+        <img class="avatar" alt="avatar" src="https://theblossomingkitchen.com/wp-content/uploads/2016/05/Kara-Hatherill-Headshot-square-300x291.jpg"/>
+        <p>Selena</p>
+        </div>
+
+        <div>
+            <img class="avatar" alt="avatar" src="https://lyrictheatreokc.com/wp-content/uploads/2015/09/Geno-Square-Headshot-300x300.jpeg" />
+            <p>Samuel</p>
+        </div>
+
+        <div>
+            <img class="avatar" alt="avatar" src="https://ninaparkerstudios.com/wp-content/uploads/2019/10/G2W-Headshots-NinaParkerStudios-0971-Square.jpg"/>
+            <p>Helen</p>
+        </div>
+
+        <div>
+             <img class="avatar" alt="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBTEp4JFEaY4ScJOliHRi7ChudUMbB_06wkA&usqp=CAU"/>
+             <p>Zack</p>
+        </div>
+     </div>
+     <hr>
+     <div>
+         <h3>Activity</h3>
+    </div>
+
+   <div class="cards-container">
+        <% @venues.all.each do |venue| %>
+        <div class="card-product">
+            <img src="https://www.brian-coffee-spot.com/wp-content/uploads/2020/04/Thumbnail-Kanazawaya-Coffee-Shop-Head-Office-DSC_0709t.jpg"/>
+            <div class="card-product-infos">
+            <h2><%= venue.name %></h2>
+            <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
+                <div class="d-flex justify-content-between">
+                <p><%= "⭐️" * (venue.rating || 0) %></p>
+                <div class="d-flex justify-content-right">
+                <i class="fas fa-share-square big-icon"></i>
+                <i class="far fa-heart big-icon"></i>
+                </div>
+            </div>
+            </div>
+        </div>
+        <% end %>
+        </div>
+
+
+    </div>
+    </div>
+
