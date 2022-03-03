@@ -6,25 +6,24 @@
     <h1>Enter your addresses to meet halfway!</h1>
   </div>
 
+
 <div class="form-div d-flex justify-content-center">
   <%= form_with url: venues_path, method: :get do |form| %>
-    <%= form.text_field :address1, placeholder: "Address One"%>
-    <%= form.text_field :address2, placeholder: "Address Two"%>
-    <%= form.submit %>
-  <% end  %>
-</div>
+    <%= form.text_field :address1, placeholder: "Address One", class: "form-control mb-2"%>
+    <%= form.text_field :address2, placeholder: "Address Two" ,class:"form-control mb-2" %>
 
 
 
-
-    <div class="form-div d-flex justify-content-center">
+    <%# <div class="form-div d-flex justify-content-center">
       <form>
         <label for="Address One"></label>
         <input class="address-input" type="text" placeholder="Address One"><br><br>
         <label for="Address Two"></label>
         <input class="address-input"type="text" placeholder="Address Two"><br><br>
       </form>
-    </div>
+    </div> %>
+
+
 
     <div class="filter-div">
       <div class="row mx-auto">
@@ -62,7 +61,14 @@
     </div>
 
   <div class="button-div text-center">
-    <button class="button" type="button">Meet Halfway!</button>
+    <%= form.submit value: 'Meet Halfway!', class: "btn btn-primary mb-2 rounded"%>
+  <% end  %>
+</div>
+    <%# <button class="button" type="button">Meet Halfway!</button> %>
   </div>
+
+
+
+
 
 </div>
