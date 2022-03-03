@@ -243,8 +243,6 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
-  arm64-darwin-21
-  x86_64-darwin-18
   x86_64-darwin-18
   x86_64-darwin-20
   x86_64-darwin-21

@@ -1,0 +1,41 @@
+.venue-image {
+   height: 30vh;
+   
+   img {
+       height: 100%;
+       object-fit: cover;
+       width: 100%;
+       border-top-right-radius: 15px;
+       border-top-left-radius: 15px;
+   }
+}
+ul, li{
+   list-style: none;
+   padding: 8px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: inherit;
+    margin-left: 3px; 
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.venue-container {
+    background-color: #9C9CD0;
+    padding: 12px;
+    height: 100vh;
+    border-radius: 15px;
+    
+}
+.venue-infos {
+    background-color: #DEDAF3;
+    padding: 24px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 60%;
+}
