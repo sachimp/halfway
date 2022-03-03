@@ -6,3 +6,15 @@
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+
+.mapbox-container {
+  position: sticky;
+  top: 0;
+  align-items: center;
+  margin: 5px;
+  border-radius: 25px;
+}
+
+.mapbox {
+  border-radius: 6px;
+}
