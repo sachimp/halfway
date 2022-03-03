@@ -5,11 +5,15 @@
 </div>
 <br>
 
+
+<% @venues.all.each do |venue| %>
 <div class="card-product">
   <img src=""/>
   <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
+    <h2><%= venue.name %></h2>
+    <p>Product description with only.</p>
+    <p><%= venue.rating %></p>
   </div>
 </div>
+<% end %>
 
