@@ -15,13 +15,12 @@
   <div class="card-product-infos">
     <h2><%= venue.name %></h2>
     <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
-    <p><%= "⭐️" * (venue.rating || 0) %></p>
-    <div class="d-flex justify-content-between">
-      <p><%= %></p>
       <div class="d-flex justify-content-between">
-       <i class="fas fa-share-square big-icon"></i>
-       <i class="far fa-heart big-icon"></i>
-      </div>
+       <p><%= "⭐️" * (venue.rating || 0) %></p>
+       <div class="d-flex justify-content-right">
+        <i class="fas fa-share-square big-icon"></i>
+        <i class="far fa-heart big-icon"></i>
+       </div>
     </div>
   </div>
 </div>
