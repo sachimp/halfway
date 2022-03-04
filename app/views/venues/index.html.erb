@@ -1,27 +1,31 @@
 <!--get the map put into a id map-->
 <!--take the card product from le wagon -->
 <!--within the product card need to add extra features like ratings,icons -->
-<div style="width: 100%; height: 350px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-<br>
-
-
-<% @venues.all.each do |venue| %>
-<div class="card-product">
-  <img src=""/>
-  <div class="card-product-infos">
-    <h2><%= venue.name %></h2>
-    <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
-    <div class="d-flex justify-content-between">
-      <div class="d-flex justify-content-between">
-       <i class="fas fa-share-square big-icon"></i>
-       <i class="far fa-heart big-icon"></i>
-      </div>
-    </div>
+<div class="mapbox-container">
+  <div class="mapbox", style="width: 100%; height: 350px;"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-<% end %>
 
+<div class="cards-container">
+  <% @venues.all.each do |venue| %>
+    <%= link_to venue_path(venue) do %>
+    <div class="card-product">
+      <img src="https://www.brian-coffee-spot.com/wp-content/uploads/2020/04/Thumbnail-Kanazawaya-Coffee-Shop-Head-Office-DSC_0709t.jpg"/>
+      <div class="card-product-infos">
+        <h2><%= venue.name %></h2>
+        <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
+          <div class="d-flex justify-content-between">
+          <p><%= "⭐️" * (venue.rating || 0) %></p>
+          <div class="d-flex justify-content-right">
+            <i class="fas fa-share-square big-icon"></i>
+            <i class="far fa-heart big-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
