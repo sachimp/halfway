@@ -13,7 +13,7 @@
   <% @venues.all.each do |venue| %>
     <%= link_to venue_path(venue) do %>
     <div class="card-product">
-      <img src="https://www.brian-coffee-spot.com/wp-content/uploads/2020/04/Thumbnail-Kanazawaya-Coffee-Shop-Head-Office-DSC_0709t.jpg"/>
+      <img src="<%=venue.image_url%>"/>
       <div class="card-product-infos">
         <h2><%= venue.name %></h2>
         <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
