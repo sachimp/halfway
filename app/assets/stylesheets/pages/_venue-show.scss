@@ -1,41 +1,85 @@
 .venue-image {
-   height: 30vh;
-   
-   img {
-       height: 100%;
-       object-fit: cover;
-       width: 100%;
-       border-top-right-radius: 15px;
-       border-top-left-radius: 15px;
-   }
-}
-ul, li{
-   list-style: none;
-   padding: 8px;
+  height: 30vh;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
 }
 
-h4 {
-    font-size: 20px;
-    font-weight: inherit;
-    margin-left: 3px; 
+.place-holder-one {
+  position: absolute;
+  right: 50px;
+  top: 330px;
+  width: 18px;
 }
+
+.place-holder-two {
+  position: absolute;
+  right: 20px;
+  top: 330px;
+  width: 18px;
+}
+
+.place-holder-two:hover {
+  color: red;
+  transition: 0.2s ease;
+}
+// .card h2:hover {
+//   color: white;
+//   transition: 0.3s ease;
+// }
+
+.venue-header .shop-open {
+  position: absolute;
+  right: 120px;
+  top: 295px;
+  width: 18px;
+}
+
+.venue-header .shop-open-display {
+  position: absolute;
+  right: 34px;
+  top: 293px;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+// .shop-open {
+//   margin-left: 215px;
+//   margin-top: -135px;
+//   width: 15px;
+// }
 
 h2 {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 8px;
 }
 
 .venue-container {
-    background-color: #9C9CD0;
-    padding: 12px;
-    height: 100vh;
-    border-radius: 15px;
-    
+  background-color: #9c9cd0;
+  padding: 12px;
+  height: 100vh;
+  border-radius: 15px;
 }
+
 .venue-infos {
-    background-color: #DEDAF3;
-    padding: 24px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 60%;
+  background-color: #dedaf3;
+  padding: 24px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 60%;
+}
+
+i {
+  margin-right: 15px;
 }

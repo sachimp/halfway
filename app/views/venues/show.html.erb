@@ -1,12 +1,16 @@
 
 <div class="venue-container">
     <div class="venue-image">
-      <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/8b/e3/dd/soho-coffee-co.jpg" alt=""> 
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/8b/e3/dd/soho-coffee-co.jpg" alt="">
     </div>
     <div class="venue-infos">
         <div class="venue-header">
           <h2><%= @venue.name %></h2>
-          <h4>London</h4> 
+          <h4>London</h4>
+          <i class="place-holder-one fas fa-id-card"></i>
+          <i class="place-holder-two fas fa-id-card"></i>
+          <%= image_tag "shop-open.png", :class => "shop-open" %>
+          <p class="shop-open-display">Shop Open</p>
           <hr>
         </div>
         <div class="venue-list">
@@ -22,6 +26,3 @@
         </div>
     </div>
 </div>
-
-
-
