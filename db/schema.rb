@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2022_03_04_144809) do
     t.float "longitude"
     t.string "website"
     t.string "image_url"
-    t.string "GoogleMapsURL"
+    t.string "google_maps_url"
   end
 
   add_foreign_key "favourites", "users"

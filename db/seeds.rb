@@ -32,7 +32,7 @@ Venue.destroy_all
 
 # Soho venues - DRINKS
 
-Venue.create(name: "Bar Soho", address: "23 Old Compton St, London W1D 5JL", category: "bar", rating: 4.0, website: "barsoho.co.uk", image_url:"https://media-cdn.tripadvisor.com/media/photo-s/0c/99/eb/3b/screenshot-2016-08-19.jpg", GoogleMapsURL: "https://www.google.com/maps/place/Bar+Soho/@51.5131954,-0.1331098,17z/data=!3m1!4b1!4m5!3m4!1s0x487604d2c8b40985:0x8ebdd15d89d7860b!8m2!3d51.5132126!4d-0.1309545")
+Venue.create(name: "Bar Soho", address: "23 Old Compton St, London W1D 5JL", category: "bar", rating: 4.0, website: "barsoho.co.uk", image_url:"https://media-cdn.tripadvisor.com/media/photo-s/0c/99/eb/3b/screenshot-2016-08-19.jpg", google_maps_url: "https://www.google.com/maps/place/Bar+Soho/@51.5131954,-0.1331098,17z/data=!3m1!4b1!4m5!3m4!1s0x487604d2c8b40985:0x8ebdd15d89d7860b!8m2!3d51.5132126!4d-0.1309545")
 puts "venue_created"
 Venue.create(name: "BrewDog Soho", address: "21 Poland St, London W1F 8QG", category: "bar", rating: 4.4, website: "brewdog.com", image_url:"https://foodetective-production.s3.amazonaws.com/uploads/picture/photo/9fddb17c-aa9c-4311-a129-c41dee8bcb4c/photo.jpeg")
 puts "venue_created"
