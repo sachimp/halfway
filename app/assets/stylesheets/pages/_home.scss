@@ -15,6 +15,7 @@ body {
 .heading-div {
   // background-color: red;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 h1 {
@@ -23,11 +24,7 @@ h1 {
   font-size: 15px;
 }
 
-label {
-  margin-bottom: 45px;
-}
-
-.address-input {
+.form-control {
   border: none;
   border-radius: 5px;
   background-color: #dedaf3;
@@ -36,7 +33,23 @@ label {
   width: 300px;
   height: 45px;
   opacity: 85%;
+  margin-left: 10px;
 }
+
+label {
+  margin-bottom: 45px;
+}
+
+// .address-input {
+//   border: none;
+//   border-radius: 5px;
+//   background-color: #dedaf3;
+//   text-align: center;
+//   padding: 8px;
+//   width: 300px;
+//   height: 45px;
+//   opacity: 85%;
+// }
 
 ::placeholder {
   color: black;
@@ -48,7 +61,7 @@ input:focus::placeholder {
 }
 
 .filter-div {
-  margin-top: 35px;
+  margin-top: 45px;
 }
 
 .row {
@@ -60,11 +73,23 @@ input:focus::placeholder {
   margin-top: 40px;
 }
 
-.button {
+// .button {
+//   border: none;
+//   border-radius: 4px;
+//   background-color: #dedaf3;
+//   color: black;
+//   font-size: 15px;
+//   padding: 8px;
+//   height: 40px;
+//   text-align: center;
+//   width: 200px;
+// }
+
+.btn {
   border: none;
   border-radius: 4px;
   background-color: #dedaf3;
-  color: black;
+  color: #717888;
   font-size: 15px;
   padding: 8px;
   height: 40px;

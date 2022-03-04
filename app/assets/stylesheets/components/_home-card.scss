@@ -9,7 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 90%;
+  opacity: 65%;
+
   // text-align: center;
 }
 
@@ -18,6 +19,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+
   //css background filter gray
 }
 
@@ -27,6 +29,8 @@
   font-weight: 600;
   position: absolute;
   margin: 0px;
+  opacity: 100%;
+  // text-shadow: 0 1px 0 black;
 }
 
 .card:hover {
