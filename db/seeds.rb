@@ -28,7 +28,7 @@ puts 'venue_created'
 Venue.create(name: 'Cocotte Shoreditch', address: ' 8 Hoxton Square, London N1 6N4', category: 'restaurant', rating: 4.5)
 puts 'venue_created'
 
-Venue.create(name: 'Perk - Neighbourhood Coffee Bar', address: '1A Alston Rd, Wentworth Rd, Barnet EN5 4PA', category: 'coffee shop', rating: 4.9)
+Venue.create(name: 'Perk - Neighbourhood Coffee', address: '1A Alston Rd, Wentworth Rd, Barnet EN5 4PA', category: 'coffee shop', rating: 4.9)
 puts 'venue_created'
 
 Venue.create(name: 'SOHO Coffee Co.', address: "10 St. Paul's Churchyard, London EC4M 8AL", category: 'coffee shop', rating: 4.1)
