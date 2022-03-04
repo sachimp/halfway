@@ -23,7 +23,7 @@ class VenuesController < ApplicationController
         lat: venue.latitude,
         lng: venue.longitude,
         info_window: render_to_string(partial: "info_window", locals: { venue: venue }),
-        image_url: helpers.asset_url("drinks.jpg")
+        image_url: helpers.asset_url("bar.svg")
       }
     end
 
@@ -34,7 +34,7 @@ class VenuesController < ApplicationController
         lat: @halfway_coordinates.first,
         lng: @halfway_coordinates.last,
         info_window: render_to_string(partial: "halfway_window", locals: { halfpoint: halfway_address }),
-        image_url: helpers.asset_url("coffee.jpg")
+        image_url: helpers.asset_url("crosshair.svg")
       }
     )
   end
