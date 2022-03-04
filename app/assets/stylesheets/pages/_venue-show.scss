@@ -35,17 +35,21 @@
 
 .venue-header .shop-open {
   position: absolute;
-  right: 120px;
-  top: 295px;
+  right: 76px;
+  top: 311px;
   width: 18px;
 }
 
 .venue-header .shop-open-display {
   position: absolute;
   right: 34px;
-  top: 293px;
+  top: 309px;
   font-size: 15px;
   font-weight: 100;
+}
+
+p.shop-open-display {
+  color: white;
 }
 
 // .shop-open {
@@ -82,4 +86,8 @@ li {
 
 i {
   margin-right: 15px;
+}
+
+a {
+  color: black;
 }
