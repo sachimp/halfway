@@ -19,11 +19,20 @@
         <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
           <div class="d-flex justify-content-between">
           <p><%= "⭐️" * (venue.rating || 0) %></p>
-          <div class="d-flex justify-content-right">
-            <i class="fas fa-share-square big-icon"></i>
-            <i class="far fa-heart big-icon"></i>
-          </div>
-        </div>
+          <%# <div class="icons", style="float: right;">
+              <div class="d-flex justify-content-right">
+                <i class="fas fa-share-square big-icon"></i>
+                <i class="far fa-heart big-icon"></i>
+              </div>
+          </div> %>
+      
+       </div>
+        <div class="icons">
+           <div class="d-flex justify-content-right">
+              <i class="fas fa-share-square big-icon"></i>
+              <i class="far fa-heart big-icon"></i>
+           </div>
+       </div>
       </div>
     </div>
     <% end %>

@@ -45,9 +45,14 @@
 
   .card-product .card-product-infos {
     padding: 16px;
+    flex-grow: 1;
   }
 
   .cards-container {
     overflow-y: scroll;
     height: 48vh;
   }
+.icons {
+    position: relative;
+    float: right;
+}
