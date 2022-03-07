@@ -1,8 +1,42 @@
 
 <div class="venue-container">
-    <div class="venue-image">
-      <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/8b/e3/dd/soho-coffee-co.jpg" alt="">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/8b/e3/dd/soho-coffee-co.jpg" class="d-block w-100" alt="...">
     </div>
+    <div class="carousel-item">
+      <img src="https://aquabarandgrill.co.uk/shopimages/sections/extras/restauranta-aqua-bar-grill-italian-greak-spanish.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://julietangus.com/wp-content/uploads/2017/05/AquaSpirit_4.jpg" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="https://media.gq-magazine.co.uk/photos/6113b4e21b7ed1398dea9033/master/w_1909,h_1282,c_limit/191105_THH_0122_LR_RT.jpg" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="https://static.designmynight.com/uploads/2017/08/ab_disrepute_low_res_14-optimised.jpg" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="https://images.squaremeal.co.uk/cloud/article/8811/images/best-vegan-restaurants-soho-old-compton-brasserie_05072019014245.png?w=1000" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+    <%# <div class="venue-image">
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/8b/e3/dd/soho-coffee-co.jpg" alt="">
+    </div> %>
+
     <div class="venue-infos">
         <div class="venue-header">
           <h2><%= @venue.name %></h2>
@@ -17,7 +51,7 @@
             <ul>
              <li><i class="fas fa-map-marker-alt"></i></i>  <%= @venue.address %> </li>
              <li><i class="fas fa-coffee"></i></i>  <%= @venue.category %> </li>
-             <li>4 <%="⭐️" * @venue.rating %> </li>
+             <li>4 <%="⭐️" * @venue.rating %></li>
              <li><i class="fas fa-clock"></i> Open 9:00am - 5:00pm</li>
              <li><i class="fas fa-id-card"></i> talktous@sohocoffee.co.uk</li>
              <li><i class="fas fa-phone-square-alt"></i>  01242 243 999</li>
