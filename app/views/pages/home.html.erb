@@ -9,8 +9,11 @@
 
 <div class="form-div d-flex justify-content-center">
 
-  <%= form_with url: venues_path, method: :get, data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } do |form| %>
-    <%= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center", id: "address_one" %>
+  <%#= form_with url: venues_path, method: :get, data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } do |form| %>
+    <%#= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center", id: "address_one" %>
+
+  <%= simple_form_for :venues, url: venues_path, method: :get do |form| %>
+    <%= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center"%>
     <%= form.text_field :address2, placeholder: "Address Two" ,class:"form-control" %>
 
     <%= form.text_field :address1,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_04_114149) do
+ActiveRecord::Schema.define(version: 2022_03_07_103108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,9 @@ ActiveRecord::Schema.define(version: 2022_03_04_114149) do
     t.float "longitude"
     t.string "website"
     t.string "image_url"
+    t.string "google_maps_url"
+    t.string "image_url2"
+    t.string "image_url3"
   end
 
   add_foreign_key "favourites", "users"
