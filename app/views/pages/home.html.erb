@@ -8,10 +8,14 @@
 
 
 <div class="form-div d-flex justify-content-center">
-  <%= form_with url: venues_path, method: :get do |form| %>
-    <%= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center"%>
+
+  <%= form_with url: venues_path, method: :get, data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } do |form| %>
+    <%= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center", id: "address_one" %>
     <%= form.text_field :address2, placeholder: "Address Two" ,class:"form-control" %>
 
+    <%= form.text_field :address1,
+      data: { geocoder_target: "address" }, class: "d-none"%>
+    <%#= form.hidden_field :address1, input_html: { data: { "..." }, class: "d-none" } %>
 
 
     <%# <div class="form-div d-flex justify-content-center">
@@ -62,8 +66,8 @@
 
   <div class="button-div text-center">
     <%= form.submit value: 'Meet Halfway!', class: "btn btn-primary mb-2 rounded"%>
-  <% end  %>
 </div>
+  <% end %>
     <%# <button class="button" type="button">Meet Halfway!</button> %>
   </div>
 
