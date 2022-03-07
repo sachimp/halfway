@@ -88,13 +88,17 @@ input:focus::placeholder {
 .btn {
   border: none;
   border-radius: 4px;
-  background-color: #dedaf3;
-  color: #717888;
+  background-color: white;
+  color: black;
+  font-style: Montserrat;
   font-size: 15px;
+  font-weight: semi-bold;
   padding: 8px;
-  height: 40px;
+  height: 60px;
   text-align: center;
   width: 200px;
+  margin: auto;
+  box-shadow: 0 0 10px #000;
 }
 
 .mapboxgl-ctrl-geocoder {
@@ -102,4 +106,10 @@ input:focus::placeholder {
   width: 100%;
   border: 1px solid lightgrey;
   box-shadow: none;
+  background-color:#dedaf3;
 }
+
+// .mb-3.string.required.venues_address2 {
+//   position: relative;
+//   z-index: -1;
+// }
