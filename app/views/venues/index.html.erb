@@ -30,7 +30,7 @@
         <div class="icons">
            <div class="d-flex justify-content-right">
               <i class="fas fa-share-square big-icon"></i>
-              <i class="far fa-heart big-icon"></i>
+              <%= link_to "heart", favourites_path(venue.id), method: :post %>
            </div>
        </div>
       </div>
