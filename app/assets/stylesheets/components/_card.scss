@@ -1,5 +1,5 @@
 .card img, map{
-    height: 100vh;
+  height: 100vh;
 }
 
 .card-product {
@@ -53,8 +53,9 @@
   height: 48vh;
 }
 
-.favourites-card-container {
-  overflow-y: scroll;
+.longer-cards-container {
+  height: 72vh;
+  overflow: auto;
 }
 
 .icons {
