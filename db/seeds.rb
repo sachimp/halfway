@@ -33,6 +33,7 @@ Venue.destroy_all
 # Soho venues - DRINKS
 
 Venue.create(name: "Bar Soho", address: "23 Old Compton St, London W1D 5JL", category: "bar", rating: 4.0, website: "barsoho.co.uk", image_url:"https://media-cdn.tripadvisor.com/media/photo-s/0c/99/eb/3b/screenshot-2016-08-19.jpg", image_url2:"https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2018/03/03043943/sketch.jpg", image_url3:"https://londoncitycalling.files.wordpress.com/2016/12/img_0697.jpg")
+
 puts "venue_created"
 Venue.create(name: "BrewDog Soho", address: "21 Poland St, London W1F 8QG", category: "bar", rating: 4.4, website: "brewdog.com", image_url:"https://foodetective-production.s3.amazonaws.com/uploads/picture/photo/9fddb17c-aa9c-4311-a129-c41dee8bcb4c/photo.jpeg",image_url2:"https://theresident.wpms.greatbritishlife.co.uk/wp-content/uploads/sites/10/2016/01/new-rests-soho-residence12.jpg",image_url3:"https://www.thelasttuesdaysociety.org/wp-content/uploads/2021/05/cocktail10.jpg")
 puts "venue_created"

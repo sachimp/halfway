@@ -38,25 +38,31 @@
     </div> %>
 
     <div class="venue-infos">
-        <div class="venue-header">
+        <div class="venue-header text-center">
           <h2><%= @venue.name %></h2>
           <h4>London</h4>
-          <i class="place-holder-one fas fa-id-card"></i>
-          <i class="place-holder-two fas fa-id-card"></i>
+          <h2><%="⭐️" * @venue.rating %></h2>
+          <!-- <i class="place-holder-one fas fa-id-card"></i> !-->
+          <!-- <i class="place-holder-two fas fa-id-card"></i> !-->
           <%= image_tag "shop-open.png", :class => "shop-open" %>
-          <p class="shop-open-display">Shop Open</p>
+          <p class="shop-open-display">Open</p>
           <hr>
         </div>
         <div class="venue-list">
             <ul>
              <li><i class="fas fa-map-marker-alt"></i></i>  <%= @venue.address %> </li>
+
              <li><i class="fas fa-coffee"></i></i>  <%= @venue.category %> </li>
              <li>4 <%="⭐️" * @venue.rating %></li>
+
              <li><i class="fas fa-clock"></i> Open 9:00am - 5:00pm</li>
-             <li><i class="fas fa-id-card"></i> talktous@sohocoffee.co.uk</li>
-             <li><i class="fas fa-phone-square-alt"></i>  01242 243 999</li>
+             <li><i class="fas fa-id-card"></i> <%= @venue.website %></li>
+              <li><i class="fas fa-id-card"></i><a href="<%= @venue.google_maps_url %>">Open Google Maps</a></li>
+
             </ul>
-            <%= link_to 'Back to your search', :back %>
+            <div class="d-flex justify-content-around">
+              <%= link_to 'Back to your search', :back, class: "btn-flat" %>
+            </div>
         </div>
     </div>
 </div>
