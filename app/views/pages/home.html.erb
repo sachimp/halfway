@@ -8,6 +8,7 @@
 
 
 <div class="form-div d-flex justify-content-center">
+
   <%= form_with url: venues_path, method: :get do |form| %>
 
   <div class="input-group mb-3">
@@ -21,6 +22,11 @@
   </div>
 
 
+
+
+  <%= simple_form_for :venues, url: venues_path, method: :get do |form| %>
+    <%= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center"%>
+    <%= form.text_field :address2, placeholder: "Address Two" ,class:"form-control" %>
 
 
 
