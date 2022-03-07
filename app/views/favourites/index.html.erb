@@ -26,11 +26,17 @@
     </nav>
 </div>
 
-<div class="container">
+<div class="favourites-cards-container">
   <% @favourites.each do |favourite| %>
     <div class="card-product">
-      <h2><%= favourite.venue.name %></h2>
+      <img src="<%=favourite.venue.image_url%>"/>
+      <div class="card-product-infos">
+        <h2><%= favourite.venue.name %></h2>
+        <p><i class="fas fa-map-marker-alt"></i> <%= favourite.venue.address %></p>
+        <div class="d-flex justify-content-between">
+          <p><%= "⭐️" * (favourite.venue.rating || 0) %></p>
+        </div>
+      </div>
     </div>
   <% end %>
-
 </div>
