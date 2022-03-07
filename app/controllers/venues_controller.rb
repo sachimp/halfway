@@ -44,10 +44,13 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
   end
 
-  def create
-    @favourite = Favourite.create(user: current_user, venue: Venue.find(params[:id]).id)
-    @user = current_user
-    # @favourite.user = current_user.id
-    # @favourite.venue = Venue.find(params[:id])
+  # def create
+  #   @favourite = Favourite.create(user: current_user, venue: Venue.find(params[:id]).id)
+  #   @user = current_user
+  #   # @favourite.user = current_user.id
+  #   # @favourite.venue = Venue.find(params[:id])
+  # end
+
+  def
   end
 end
