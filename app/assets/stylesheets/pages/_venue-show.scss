@@ -1,3 +1,8 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #9d9cd0;
+}
+
 .venue-image {
   height: 40vh;
 
@@ -10,21 +15,26 @@
   }
 }
 
-.place-holder-one {
+.carousel-inner {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.carousel-item {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 475px;
+}
+
+.favourite {
+  color: grey;
   position: absolute;
-  right: 50px;
-  top: 330px;
+  right: 255px;
+  top: 386px;
   width: 18px;
 }
 
-.place-holder-two {
-  position: absolute;
-  right: 20px;
-  top: 330px;
-  width: 18px;
-}
-
-.place-holder-two:hover {
+.favourite:hover {
   color: red;
   transition: 0.2s ease;
 }
@@ -33,40 +43,35 @@
 //   transition: 0.3s ease;
 // }
 
-.venue-header .shop-open {
-  position: absolute;
-  right: 76px;
-  top: 311px;
-  width: 18px;
-}
-
-.venue-header .shop-open-display {
-  position: absolute;
-  right: 34px;
-  top: 309px;
-  font-size: 15px;
-  font-weight: 100;
-}
-
-p.shop-open-display {
-  color: white;
-}
-
-// .shop-open {
-//   margin-left: 215px;
-//   margin-top: -135px;
-//   width: 15px;
-// }
-
 h2 {
   font-size: 23px;
   font-weight: 700;
+}
+
+h4 {
+  margin: 0px;
+}
+
+hr {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.venue-list {
+  margin-left: -20px;
+  margin-top: -20px;
+  width: 340px;
 }
 
 ul,
 li {
   list-style: none;
   padding: 8px;
+  font-size: 15px;
+}
+
+.venue-header {
+  margin-top: -8px;
 }
 
 .venue-container {
@@ -81,13 +86,32 @@ li {
   padding: 24px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  height: 60%;
-}
-
-i {
-  margin-right: 15px;
+  height: 52%;
 }
 
 a {
   color: black;
+}
+
+.button-div {
+  margin-top: 0px;
+  margin-top: -18px;
+}
+
+.back-btn {
+  border-radius: 50px;
+  background-color: white;
+  color: #272359;
+  height: 28px;
+  width: 100px;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 5px 35px;
+  text-decoration: none;
+}
+
+.icon {
+  width: 30px;
+  margin-right: 15px;
+  margin-bottom: -5px;
 }
