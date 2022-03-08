@@ -3,11 +3,11 @@ class VenuesController < ApplicationController
     @venues = Venue.all
     
 
-    results1 = Geocoder.search(params[:address1])
+    results1 = Geocoder.search(params[:venues][:address1])
     results1_lat = results1.first.data["lat"].to_f
     results1_long = results1.first.data["lon"].to_f
 
-    results2 = Geocoder.search(params[:address2])
+    results2 = Geocoder.search(params[:venues][:address2])
     results2_lat = results2.first.data["lat"].to_f
     results2_long = results2.first.data["lon"].to_f
 

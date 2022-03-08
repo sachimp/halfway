@@ -25,27 +25,15 @@
   margin: 0;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
+  .card-product p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+  }
 
 .big-icon {
     font-size: 18px;
-}
-
-.card-product i {
-  line-height: 1.4;
-  opacity: .7;
-  margin: 8px 6px 0 6px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-  flex-grow: 1;
 }
 
 .cards-container {
@@ -57,6 +45,17 @@
   height: 72vh;
   overflow: auto;
 }
+  .card-product i {
+    line-height: 1.4;
+    opacity: .7;
+  }
+
+  .card-product .card-product-infos {
+    padding: 16px;
+    flex-grow: 1;
+    padding: 2px;
+    margin: 4px;
+  }
 
 .icons {
   position: relative;
