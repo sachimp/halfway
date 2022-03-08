@@ -66,10 +66,10 @@ ActiveRecord::Schema.define(version: 2022_03_07_144827) do
     t.float "longitude"
     t.string "website"
     t.string "image_url"
+    t.integer "price_range"
     t.string "google_maps_url"
     t.string "image_url2"
     t.string "image_url3"
-    t.integer "price_range"
   end
 
   add_foreign_key "favourites", "users"
