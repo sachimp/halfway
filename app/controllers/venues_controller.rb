@@ -50,7 +50,4 @@ class VenuesController < ApplicationController
   #   # @favourite.user = current_user.id
   #   # @favourite.venue = Venue.find(params[:id])
   # end
-
-  def
-  end
 end
