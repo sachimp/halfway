@@ -7,13 +7,15 @@ class FavouritesController < ApplicationController
     @favourite = Favourite.new
     @favourite.user = current_user
     @favourite.venue = Venue.find(params[:format])
-    @favourite.save
+    if @favourite.save
+      redirect_back(fallback_location:"/")
+    end
   end
 
   def destroy
     @favourite = Favourite.find(params[:id])
-    if @favourite.destroy
-      render inline: "location.reload();"
+    if @favourite.destroy 
+      redirect_back(fallback_location:"/")
     end
   end
 end
