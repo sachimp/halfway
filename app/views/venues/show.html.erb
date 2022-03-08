@@ -51,6 +51,10 @@
              <li><%= image_tag "bar-icon.png", class: "icon" %><%= @venue.category.capitalize %> </li>
              <li><%= image_tag "rating-icon.png", class: "icon" %> <%="⭐️" * @venue.rating %></li>
 
+             <li><i class="fas fa-clock"></i> Open 9:00am - 5:00pm</li>
+             <li><i class="fas fa-id-card"></i> <%= @venue.website %></li>
+              <li><i class="fas fa-id-card"></i><a href="https://maps.google.com/?q=<%= @venue.address%>">Open Google Maps</a></li>
+
                <li><%= image_tag "pound-icon.png", class: "icon" %> <%= "£" * @venue.price_range %></li>
 
 
@@ -60,6 +64,7 @@
 
              <li><%= image_tag "internet-icon.png", class: "icon" %><%= @venue.website %></li>
               <li><%= image_tag "map-icon.png", class: "icon" %><a href="<%= @venue.google_maps_url %>">Open Google Maps</a></li>
+
 
             </ul>
             <div class="button-div text-center">
