@@ -22,14 +22,14 @@
           <p><strong><%= "£" * venue.price_range %></strong></p>
        
         <div class="icons">
-           <div class="d-flex justify-content-right">
-              <%= link_to "", "/", class: "fas fa-share-square big-icon" %>
-              <% if Favourite.exists?(venue_id: venue.id) %>
-               <%= link_to "", favourite_path(venue.id), method: :delete, class: "fas fa-heart"%>
-              <% else %>
-                 <%= link_to "", favourites_path(venue.id), method: :post, class: "far fa-heart big-icon"%>
-              <% end %>
-           </div>
+          <div class="d-flex justify-content-right">
+            <%= link_to "", "/", class: "fas fa-share-square big-icon" %>
+            <% if Favourite.exists?(venue_id: venue.id) %>
+              <%= link_to "", favourite_path(venue.id), method: :delete, class: "fas fa-heart"%>
+            <% else %>
+              <%= link_to "", favourites_path(venue.id), method: :post, class: "far fa-heart big-icon"%>
+            <% end %>
+          </div>
        </div>
       </div>
     </div>

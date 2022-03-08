@@ -11,8 +11,10 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
-    @favourite = Favourite.find(params[:format])
-    @favourite.destroy
+    @favourite = Favourite.find(params[:id])
+    if @favourite.destroy
+      render inline: "location.reload();"
+    end
   end
 end
 
