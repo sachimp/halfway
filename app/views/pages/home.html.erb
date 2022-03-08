@@ -36,17 +36,14 @@
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-        <%= form.text_field :address1, placeholder: "Address One", class: "form-control"%>
+        <%= f.text_field :address1, placeholder: "Address One", class: "form-control"%>
       </div>
 
-        <div class="input-group mb-3">
+      <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-        <%= form.text_field :address1, placeholder: "Address Two", class: "form-control"%>
+        <%= f.text_field :address1, placeholder: "Address Two", class: "form-control"%>
       </div>
 
-      <%= simple_form_for :venues, url: venues_path, method: :get do |form| %>
-        <%= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center"%>
-        <%= form.text_field :address2, placeholder: "Address Two" ,class:"form-control"%>
 
         <div class="filter-div">
           <div class="row mx-auto">
@@ -79,7 +76,7 @@
             <%= image_tag "parks.jpg" %>
                 <h2>Parks</h2>
             </div>
-      <%= f.button :submit, "Meet Halfway!", class: "btn btn-primary" %>
+        <%= f.button :submit, "Meet Halfway!", class: "btn btn-primary" %>
       </div>
     </div>
 
@@ -87,7 +84,5 @@
     <%#= form.submit value: 'Meet Halfway!', class: "btn btn-primary mb-2 rounded"%>
 </div>
   <% end %>
-    <%# <button class="button" type="button">Meet Halfway!</button> %>
   </div>
-    <%# <button class="button" type="button">Meet Halfway!</button> %>
 </div>
