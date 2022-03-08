@@ -1,6 +1,7 @@
 class VenuesController < ApplicationController
   def index
     @venues = Venue.all
+    
 
     results1 = Geocoder.search(params[:venues][:address1])
     results1_lat = results1.first.data["lat"].to_f
@@ -42,4 +43,11 @@ class VenuesController < ApplicationController
   def show
     @venue = Venue.find(params[:id])
   end
+
+  # def create
+  #   @favourite = Favourite.create(user: current_user, venue: Venue.find(params[:id]).id)
+  #   @user = current_user
+  #   # @favourite.user = current_user.id
+  #   # @favourite.venue = Venue.find(params[:id])
+  # end
 end
