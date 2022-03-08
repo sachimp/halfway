@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 65%;
+  opacity: 80%;
 
   // text-align: center;
 }
@@ -35,8 +35,10 @@
 
 .card:hover {
   opacity: 100%;
-  // border: 2px solid black;
+  // border: 5px solid black;
   transition: 0.3s ease;
+
+  border: 5px solid black;
 }
 .card h2:hover {
   color: white;

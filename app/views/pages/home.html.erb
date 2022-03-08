@@ -1,6 +1,6 @@
 <div class="container">
   <div class="img-div text-center">
- <%= image_tag "halfway_logo.png" %>
+    <%= image_tag "halfway_logo.png" %>
   </div>
   <div class="heading-div">
     <h1>Enter your addresses to meet halfway!</h1>
@@ -34,20 +34,22 @@
       data: { geocoder_target: "address" }, class: "d-none"%>
     <%#= form.hidden_field :address1, input_html: { data: { "..." }, class: "d-none" } %>
 
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <%= form.text_field :address1, placeholder: "Address One", class: "form-control"%>
+      </div>
 
-    <%# <div class="form-div d-flex justify-content-center">
-      <form>
-        <label for="Address One"></label>
-        <input class="address-input" type="text" placeholder="Address One"><br><br>
-        <label for="Address Two"></label>
-        <input class="address-input"type="text" placeholder="Address Two"><br><br>
-      </form>
-    </div> %>
+        <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <%= form.text_field :address1, placeholder: "Address Two", class: "form-control"%>
+      </div>
 
+      <%= simple_form_for :venues, url: venues_path, method: :get do |form| %>
+        <%= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center"%>
+        <%= form.text_field :address2, placeholder: "Address Two" ,class:"form-control"%>
 
-
-    <div class="filter-div">
-      <div class="row mx-auto">
+        <div class="filter-div">
+          <div class="row mx-auto">
             <div class="card col-md mb-2">
             <%= image_tag "coffee.jpg" %>
                 <h2>Coffee</h2>
@@ -87,9 +89,5 @@
   <% end %>
     <%# <button class="button" type="button">Meet Halfway!</button> %>
   </div>
-
-
-
-
-
+    <%# <button class="button" type="button">Meet Halfway!</button> %>
 </div>
