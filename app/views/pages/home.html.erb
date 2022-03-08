@@ -34,15 +34,7 @@
       data: { geocoder_target: "address" }, class: "d-none"%>
     <%#= form.hidden_field :address1, input_html: { data: { "..." }, class: "d-none" } %>
 
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-        <%#= f.text_field :address1, placeholder: "Address One", class: "form-control"%>
-      </div>
-
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-        <%#= f.text_field :address1, placeholder: "Address Two", class: "form-control"%>
-      </div>
+<p id="filter-text">Select your filters</p>
 
 
         <div class="filter-div">
@@ -81,7 +73,6 @@
     </div>
 
   <div class="button-div text-center">
-    <%#= form.submit value: 'Meet Halfway!', class: "btn btn-primary mb-2 rounded"%>
 </div>
   <% end %>
   </div>
