@@ -17,16 +17,19 @@
     <%#= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center"%>
     <%#= form.text_field :address2, placeholder: "Address Two" ,class:"form-control" %>
 
+    <%# , data: { controller: "disable-button", action: "submit->disable-button#disable" } %>
+    <%# , disable_button_target: "address1", action: "keyup->disable-button#retry" %>
     <div>
-      <%= simple_form_for :venues, url: venues_path, method: :get, data: { controller: "disable-button", action: "submit->disable-button#disable" } do |f| %>
+      <%= simple_form_for :venues, url: venues_path, method: :get do |f| %>
         <%= f.input :address1,
           placeholder: "Address 1", label: false,
-          input_html: { data: { geocoder_target: "address", disable_button_target: "address1", action: "keyup->disable-button#retry"}},
+          input_html: { data: { geocoder_target: "address"}, class: "d-none"},
           wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
 
+        <%# , disable_button_target: "address2" %>
         <%= f.input :address2,
           placeholder: "Address 2", label: false,
-          input_html: { data: { geocoder_target: "address", disable_button_target: "address2" }, class: "d-none" },
+          input_html: { data: { geocoder_target: "address" }, class: "d-none" },
           wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
 
 
@@ -85,7 +88,7 @@
 </div>
 
 
-<script>
+<%# <script>
   const addresses = document.querySelectorAll(".mapboxgl-ctrl-geocoder--input");
   console.log(addresses);
-</script>
+</script> %>
