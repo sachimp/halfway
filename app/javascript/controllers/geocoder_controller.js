@@ -16,8 +16,11 @@ export default class extends Controller {
     });
     console.log(this.geocoder)
     this.geocoder.addTo(this.element)
+   
+
     // console.log(this.addressTarget)
     // this.addressTarget.setAttribute("placeholder", "address 1")
+
     this.geocoder.on("result", event => this.#setInputValue(event))
     this.geocoder.on("clear", () => this.#clearInputValue())
     // this.geocoder.placeholder = "hello"
