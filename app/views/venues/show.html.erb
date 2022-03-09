@@ -51,13 +51,9 @@
              <li><%= image_tag "bar-icon.png", class: "icon" %><%= @venue.category.capitalize %> </li>
 
              <li><%= image_tag "rating-icon.png", class: "icon" %> <%= "⭐️" * @venue.rating %></li>
-
-
-             <li><%= image_tag "rating-icon.png", class: "icon" %> <%="⭐️" * @venue.rating %></li>
-
              
 
-               <li><%= image_tag "pound-icon.png", class: "icon" %> <%= "£" * @venue.price_range %></li>
+             <li><%= image_tag "pound-icon.png", class: "icon" %> <%= "£" * @venue.price_range %></li>
 
 
 
@@ -65,7 +61,7 @@
 
 
              <li><%= image_tag "internet-icon.png", class: "icon" %><%= @venue.website %></li>
-              <li><%= image_tag "map-icon.png", class: "icon" %><a href="<%= @venue.google_maps_url %>">Open Google Maps</a></li>
+             <li><%= image_tag "map-icon.png", class: "icon" %><a href="<%= @venue.google_maps_url %>" target="_blank" >Open Google Maps</a></li>
 
 
             </ul>
