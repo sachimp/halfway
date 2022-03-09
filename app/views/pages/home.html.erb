@@ -7,7 +7,7 @@
   </div>
 
 
-<div class="form-div d-flex justify-content-center">
+  <div class="form-div d-flex justify-content-center">
 
   <%#= form_with url: venues_path, method: :get, data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } do |form| %>
     <%#= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center", id: "address_one" %>
@@ -17,71 +17,69 @@
     <%#= form.text_field :address1, placeholder: "Address One", class: "form-control mb-4 d-flex justify-content-center"%>
     <%#= form.text_field :address2, placeholder: "Address Two" ,class:"form-control" %>
 
+    <div>
+      <%= simple_form_for :venues, url: venues_path, method: :get, data: { controller: "disable-button", action: "submit->disable-button#disable" } do |f| %>
+        <%= f.input :address1,
+          placeholder: "Address 1", label: false,
+          input_html: { data: { geocoder_target: "address", disable_button_target: "address1" }, class: "d-none" },
+          wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
 
-<%= simple_form_for :venues, url: venues_path, method: :get do |f| %>
-    <%= f.input :address1,
-      placeholder: "Address 1", label: false,
-      input_html: { data: { geocoder_target: "address" }, class: "d-none" },
-      wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
-
-    <%= f.input :address2,
-        placeholder: "Address 2", label: false,
-      input_html: { data: { geocoder_target: "address" }, class: "d-none" },
-      wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
-
-
-    <%#= form.text_field :address1,
-      data: { geocoder_target: "address" }, class: "d-none"%>
-    <%#= form.hidden_field :address1, input_html: { data: { "..." }, class: "d-none" } %>
+        <%= f.input :address2,
+          placeholder: "Address 2", label: false,
+          input_html: { data: { geocoder_target: "address", disable_button_target: "address2" }, class: "d-none" },
+          wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
 
 
-<p id="filter-text">Select your filters</p>
+        <%#= form.text_field :address1,
+          data: { geocoder_target: "address" }, class: "d-none"%>
+        <%#= form.hidden_field :address1, input_html: { data: { "..." }, class: "d-none" } %>
 
-
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-        <%#= f.text_field :address1, placeholder: "Address Two", class: "form-control"%>
-      </div>
-
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+          <%#= f.text_field :address1, placeholder: "Address Two", class: "form-control"%>
+        </div>
 
 
         <div class="filter-div">
           <div class="row mx-auto">
             <div class="card col-md mb-2">
-            <%= image_tag "coffee.jpg" %>
-                <h2>Coffee</h2>
-            </div>
-
-        <div class="card col-md mb-2">
-        <%= image_tag "drinks.jpg" %>
-            <h2>Drinks</h2>
-        </div>
-
-          <div class="card col-md mb-2">
-          <%= image_tag "food.png" %>
-            <h2>Food</h2>
-        </div>
-
-        <div class="card col-md mb-2">
-        <%= image_tag "clubs.jpg" %>
-            <h2>Clubs</h2>
-        </div>
-
-            <div class="card col-md mb-2">
-            <%= image_tag "cinema.png" %>
-                <h2>Cinemas</h2>
+              <%= image_tag "coffee.jpg" %>
+              <h2>Coffee</h2>
             </div>
 
             <div class="card col-md mb-2">
-            <%= image_tag "parks.jpg" %>
-                <h2>Parks</h2>
+              <%= image_tag "drinks.jpg" %>
+              <h2>Drinks</h2>
             </div>
-        <%= f.button :submit, "Meet Halfway!", class: "btn btn-primary" %>
-      </div>
+
+            <div class="card col-md mb-2">
+              <%= image_tag "food.png" %>
+              <h2>Food</h2>
+            </div>
+
+            <div class="card col-md mb-2">
+              <%= image_tag "clubs.jpg" %>
+              <h2>Clubs</h2>
+            </div>
+
+            <div class="card col-md mb-2">
+              <%= image_tag "cinema.png" %>
+              <h2>Cinemas</h2>
+            </div>
+
+            <div class="card col-md mb-2">
+              <%= image_tag "parks.jpg" %>
+              <h2>Parks</h2>
+            </div>
+
+            <%= f.button :submit, "Meet Halfway!", class: "btn btn-primary" %>
+          </div>
+        </div>
+
+        <div class="button-div text-center">
+          <%#= form.submit value: 'Meet Halfway!', class: "btn btn-primary mb-2 rounded"%>
+        </div>
+      <% end %>
     </div>
-
-  <div class="button-div text-center">
-</div>
-  <% end %>
   </div>
 </div>
