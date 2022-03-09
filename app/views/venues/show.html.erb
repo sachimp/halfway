@@ -49,9 +49,14 @@
              <li><%= image_tag "pin-icon.png", class: "icon" %><%= @venue.address %> </li>
 
              <li><%= image_tag "bar-icon.png", class: "icon" %><%= @venue.category.capitalize %> </li>
+
+             <li><%= image_tag "rating-icon.png", class: "icon" %> <%= "⭐️" * @venue.rating %></li>
+
+
              <li><%= image_tag "rating-icon.png", class: "icon" %> <%="⭐️" * @venue.rating %></li>
 
              
+
                <li><%= image_tag "pound-icon.png", class: "icon" %> <%= "£" * @venue.price_range %></li>
 
 
