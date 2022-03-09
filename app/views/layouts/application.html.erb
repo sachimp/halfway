@@ -19,8 +19,11 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
-    <div class="footer">
-      <%= render 'shared/footer' %>
-    </div>
+    
+    <% unless action_name == "landing" %>  
+      <div class="footer">
+        <%= render 'shared/footer' %>
+      </div>
+    <% end %>
   </body>
 </html>
