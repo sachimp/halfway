@@ -1,0 +1,5 @@
+meta_product_name: "Halfway"
+meta_title: "Halfway - Meet your friends at the most convenient place"
+meta_description: "We take addresses that you choose, and then find you the perfect place to meet, Halfway!"
+meta_image: "halfway_logo.png" # should exist in `app/assets/images/`
+twitter_account: "@halfway807"   # required for Twitter Cards

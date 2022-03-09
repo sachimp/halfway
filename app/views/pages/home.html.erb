@@ -20,29 +20,24 @@
     <%# , data: { controller: "disable-button", action: "submit->disable-button#disable" } %>
     <%# , disable_button_target: "address1", action: "keyup->disable-button#retry" %>
     <div>
-      <%= simple_form_for :venues, url: venues_path, method: :get do |f| %>
-        <%= f.input :address1,
-          placeholder: "Address 1", label: false,
-          input_html: { data: { geocoder_target: "address"}, class: "d-none"},
-          wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
+     <%= simple_form_for :venues, url: venues_path, method: :get do |f| %>
+      <%= f.input :address1,
+        placeholder: "Address 1", label: false,
+        input_html: { data: { geocoder_target: "address" }, class: "d-none" },
+        wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
 
-        <%# , disable_button_target: "address2" %>
-        <%= f.input :address2,
+      <%= f.input :address2,
           placeholder: "Address 2", label: false,
-          input_html: { data: { geocoder_target: "address" }, class: "d-none" },
-          wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
+        input_html: { data: { geocoder_target: "address" }, class: "d-none" },
+        wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
 
 
-        <%#= form.text_field :address1,
-          data: { geocoder_target: "address" }, class: "d-none"%>
-        <%#= form.hidden_field :address1, input_html: { data: { "..." }, class: "d-none" } %>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-          <%#= f.text_field :address1, placeholder: "Address Two", class: "form-control"%>
-        </div>
-
-
+      <%#= form.text_field :address1,
+        data: { geocoder_target: "address" }, class: "d-none"%>
+      <%#= form.hidden_field :address1, input_html: { data: { "..." }, class: "d-none" } %>
+    
+      <p id="filter-text">Select your filters</p>
+    
         <div class="filter-div">
           <div class="row mx-auto">
             <div class="card col-md mb-2">
