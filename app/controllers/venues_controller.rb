@@ -1,19 +1,35 @@
 class VenuesController < ApplicationController
   def index
     @venues = Venue.all
-    
 
-    results1 = Geocoder.search(params[:venues][:address1])
-    results1_lat = results1.first.data["lat"].to_f
-    results1_long = results1.first.data["lon"].to_f
+    if params[:venues][:address1].present? && params[:venues][:address2].present?
 
-    results2 = Geocoder.search(params[:venues][:address2])
-    results2_lat = results2.first.data["lat"].to_f
-    results2_long = results2.first.data["lon"].to_f
+      results1 = Geocoder.search(params[:venues][:address1])
+      if results1.empty?
+        results1_lat = 51.552892
+        results1_long = -0.307397
+      else
+        results1_lat = results1.first.data["lat"].to_f
+        results1_long = results1.first.data["lon"].to_f
+      end
 
-    halfway_lat = (results1_lat + results2_lat).fdiv(2)
-    halfway_long = (results1_long + results2_long).fdiv(2)
-    @halfway_coordinates = [halfway_lat, halfway_long]
+      results2 = Geocoder.search(params[:venues][:address2])
+      if results2.empty?
+        results2_lat = 51.479609
+        results2_long = 0.035824
+      else
+        results2_lat = results2.first.data["lat"].to_f
+        results2_long = results2.first.data["lon"].to_f
+      end
+
+      halfway_lat = (results1_lat + results2_lat).fdiv(2)
+      halfway_long = (results1_long + results2_long).fdiv(2)
+
+      @halfway_coordinates = [halfway_lat, halfway_long]
+    else
+      @halfway_coordinates = [51.5156446, -0.13455885]
+    end
+
 
     halfway_address = Geocoder.search(@halfway_coordinates)
     @venues_close = Venue.near(@halfway_coordinates, 1)
