@@ -38,30 +38,34 @@
     </div> %>
 
     <div class="venue-infos">
-        <div class="venue-header text-center">
+        <div class="venue-header float-left">
           <h2><%= @venue.name %></h2>
           <h4>London</h4>
-          <h2><%="⭐️" * @venue.rating %></h2>
-          <!-- <i class="place-holder-one fas fa-id-card"></i> !-->
-          <!-- <i class="place-holder-two fas fa-id-card"></i> !-->
-          <%= image_tag "shop-open.png", :class => "shop-open" %>
-          <p class="shop-open-display">Open</p>
+          <i class="favourite fas fa-heart"></i>
           <hr>
         </div>
         <div class="venue-list">
             <ul>
-             <li><i class="fas fa-map-marker-alt"></i></i>  <%= @venue.address %> </li>
+             <li><%= image_tag "pin-icon.png", class: "icon" %><%= @venue.address %> </li>
 
-             <li><i class="fas fa-coffee"></i></i>  <%= @venue.category %> </li>
-             <li>4 <%="⭐️" * @venue.rating %></li>
+             <li><%= image_tag "bar-icon.png", class: "icon" %><%= @venue.category.capitalize %> </li>
+             <li><%= image_tag "rating-icon.png", class: "icon" %> <%="⭐️" * @venue.rating %></li>
 
-             <li><i class="fas fa-clock"></i> Open 9:00am - 5:00pm</li>
-             <li><i class="fas fa-id-card"></i> <%= @venue.website %></li>
-              <li><i class="fas fa-id-card"></i><a href="<%= @venue.google_maps_url %>">Open Google Maps</a></li>
+             
+               <li><%= image_tag "pound-icon.png", class: "icon" %> <%= "£" * @venue.price_range %></li>
+
+
+
+             <li><%= image_tag "time-icon.png", class: "icon" %>Open 9:00am - 5:00pm</li>
+
+
+             <li><%= image_tag "internet-icon.png", class: "icon" %><%= @venue.website %></li>
+              <li><%= image_tag "map-icon.png", class: "icon" %><a href="<%= @venue.google_maps_url %>">Open Google Maps</a></li>
+
 
             </ul>
-            <div class="d-flex justify-content-around">
-              <%= link_to 'Back to your search', :back, class: "btn-flat" %>
+            <div class="button-div text-center">
+              <%= link_to 'Back',:back, class: "back-btn" %>
             </div>
         </div>
     </div>

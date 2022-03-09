@@ -34,7 +34,15 @@
       data: { geocoder_target: "address" }, class: "d-none"%>
     <%#= form.hidden_field :address1, input_html: { data: { "..." }, class: "d-none" } %>
 
+
 <p id="filter-text">Select your filters</p>
+
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <%#= f.text_field :address1, placeholder: "Address Two", class: "form-control"%>
+      </div>
+
 
 
         <div class="filter-div">
@@ -44,20 +52,20 @@
                 <h2>Coffee</h2>
             </div>
 
-            <div class="card col-md mb-2">
-            <%= image_tag "drinks.jpg" %>
-                <h2>Drinks</h2>
-            </div>
+        <div class="card col-md mb-2">
+        <%= image_tag "drinks.jpg" %>
+            <h2>Drinks</h2>
+        </div>
 
-              <div class="card col-md mb-2">
-              <%= image_tag "food.png" %>
-                <h2>Food</h2>
-            </div>
+          <div class="card col-md mb-2">
+          <%= image_tag "food.png" %>
+            <h2>Food</h2>
+        </div>
 
-            <div class="card col-md mb-2">
-            <%= image_tag "clubs.jpg" %>
-                <h2>Clubs</h2>
-            </div>
+        <div class="card col-md mb-2">
+        <%= image_tag "clubs.jpg" %>
+            <h2>Clubs</h2>
+        </div>
 
             <div class="card col-md mb-2">
             <%= image_tag "cinema.png" %>
