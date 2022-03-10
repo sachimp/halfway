@@ -1,16 +1,22 @@
-.card img, map{
+body {
+  background-color: #9d9cd0;
+}
+
+.card img,
+map {
   height: 100vh;
 }
 
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: #DEDAF3;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #dedaf3;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  margin: 6px;
+  // margin: 6px;
   border-radius: 6px;
+  margin: 0px 10px 7px 10px;
 }
 
 .card-product img {
@@ -23,17 +29,20 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  // margin-bottom: 10px;
+  margin: 0px 0px 5px 0px;
 }
 
-  .card-product p {
-    font-size: 12px;
-    line-height: 1.4;
-    opacity: .7;
-    margin-bottom: 0;
-  }
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.7;
+  // margin-bottom: 0;
+  margin: 5px 0px 4px 0px;
+}
 
 .big-icon {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .cards-container {
@@ -45,19 +54,36 @@
   height: 72vh;
   overflow: auto;
 }
-  .card-product i {
-    line-height: 1.4;
-    opacity: .7;
-  }
+.card-product i {
+  line-height: 1.4;
+  opacity: 0.7;
+}
 
-  .card-product .card-product-infos {
-    padding: 16px;
-    flex-grow: 1;
-    padding: 2px;
-    margin: 4px;
-  }
+.card-product .card-product-infos {
+  padding: 16px;
+  flex-grow: 1;
+  padding: 2px;
+  margin: 10px;
+}
 
-.icons {
-  position: relative;
+.share-icon {
+  position: sticky;
+  margin-right: 28px;
+  margin-top: -22px;
   float: right;
 }
+
+.heart-icon {
+  position: relative;
+  margin-left: 212px;
+  margin-top: -23px;
+  float: right;
+}
+
+// .favourite {
+//     color: grey;
+//     position: absolute;
+//     right: 255px;
+//     top: 386px;
+//     width: 18px;
+// }
