@@ -1,13 +1,15 @@
 .landing-image {
-  background-image: url(welcome-page.png);
+  background-image: url(WP.png);
   background-size: cover;
   height: 100vh;
 }
 
 .sign-up-button {
   position: absolute;
-  top: 700px;
-  left: 168px;
+  top: 627px;
+  left: 217px;
+  height: 42px;
+  width: 35%;
 }
 
 .sign-up-button a {
@@ -16,7 +18,7 @@
 
 .sign-in-button {
   position: absolute;
-  top: 782px;
+  top: 700px;
   left: 110px;
   color: white;
 }
