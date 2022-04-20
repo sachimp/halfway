@@ -3,9 +3,10 @@
 body {
   background-color: #9b9ae5;
   font-family: "Montserrat", sans-serif;
-  background: url(OG_image_HD_background.svg);
+  background: url(OG_image_HD_background.svg) no-repeat center center fixed;
   // background-size: 395px;
   background-size: cover;
+  background-repeat: no-repeat;
   // background-size: 395px 750px;
 }
 
@@ -67,11 +68,13 @@ label {
   margin: auto;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 480px){
   .footer {
     display: none;
   }
 }
+
+// RESPONSIVE DESIGN
 
 @media screen and (max-width: 480px){
   body {
@@ -235,6 +238,16 @@ label {
 
   .mobile-positioning-home {
     margin-top: -20px;
+  }
+
+  .larger-logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px){
+  .smaller-logo {
+    display: none;
   }
 }
 
