@@ -1,21 +1,23 @@
 // Specific CSS for your home-page
+
 body {
   background-color: #9b9ae5;
   font-family: "Montserrat", sans-serif;
-  background: url(Homepage.png);
+  background: url(OG_image_HD_background.svg);
   // background-size: 395px;
-  background-repeat: no-repeat;
-  background-size: 395px 750px;
+  background-size: cover;
+  // background-size: 395px 750px;
+}
+
+.heading-div {
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .img-div {
   margin-top: 50px;
   margin-bottom: 50px;
-}
-.heading-div {
-  // background-color: red;
-  text-align: center;
-  margin-bottom: 25px;
 }
 
 h1 {
@@ -42,51 +44,6 @@ label {
   margin-bottom: 45px;
 }
 
-// .address-input {
-//   border: none;
-//   border-radius: 5px;
-//   background-color: #dedaf3;
-//   text-align: center;
-//   padding: 8px;
-//   width: 300px;
-//   height: 45px;
-//   opacity: 85%;
-// }
-
-::placeholder {
-  color: black;
-  opacity: 1;
-}
-
-input:focus::placeholder {
-  color: transparent;
-}
-
-.filter-div {
-  margin-top: 25px;
-}
-
-.row {
-  width: 330px;
-  grid-gap: 15px;
-}
-
-.button-div {
-  margin-top: 40px;
-}
-
-// .button {
-//   border: none;
-//   border-radius: 4px;
-//   background-color: #dedaf3;
-//   color: black;
-//   font-size: 15px;
-//   padding: 8px;
-//   height: 40px;
-//   text-align: center;
-//   width: 200px;
-// }
-
 .btn {
   border: none;
   border-radius: 4px;
@@ -105,52 +62,183 @@ input:focus::placeholder {
   // #b2bce0;
 }
 
-.mapboxgl-ctrl-geocoder {
-  max-width: none;
-  width: 100%;
-  height: 45px;
-  border: 1px solid lightgrey;
-  box-shadow: none;
-  background-color:#dedaf3;
-  color: grey;
-  border-radius: 10px;
-}
-
-.venues_address1 {
-  position: relative;
-  z-index: 1000;
-}
-
-// .address-one{
-//   position: relative;
-//   z-index: -1;
-// }
-
-// .mb-3.string.required.venues_address2 {
-// color: grey;
-// }
-
-// .mapboxgl-ctrl-geocoder--input {
-//   // position: relative;
-//   // z-index: -1;
-// }
-
-.mapboxgl-ctrl-geocoder--icon.mapboxgl-ctrl-geocoder--icon-search{
-  // display: none;
-  // background-image: url("img/address_marker.jpg");
-}
-
-#filter-text{
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
+.halfway-button{
   text-align: center;
-  font-family: "Nunito", "Helvetica", "sans-serif";
-  line-height: 1.2;
-  margin: 0;
-  margin-top: 30px;
+  margin: auto;
 }
 
-.mobile-positioning-home {
-  margin-top: -20px;
+@media screen and (min-width: 768px){
+  .footer {
+    display: none;
+  }
 }
+
+@media screen and (max-width: 480px){
+  body {
+    background-color: #9b9ae5;
+    font-family: "Montserrat", sans-serif;
+    background: url(Homepage.png);
+    background-size: 395px;
+    background-repeat: no-repeat;
+    background-size: 395px 750px;
+  }
+
+  .img-div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .heading-div {
+    // background-color: red;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .form-control {
+    border: none;
+    border-radius: 5px;
+    background-color: #dedaf3;
+    color: #3f3f3f;
+    text-align: left;
+    font-size: 14px;
+    padding: 8px;
+    width: 300px;
+    height: 45px;
+    opacity: 85%;
+    margin-left: 10px;
+  }
+
+  label {
+    margin-bottom: 45px;
+  }
+
+  // .address-input {
+  //   border: none;
+  //   border-radius: 5px;
+  //   background-color: #dedaf3;
+  //   text-align: center;
+  //   padding: 8px;
+  //   width: 300px;
+  //   height: 45px;
+  //   opacity: 85%;
+  // }
+
+  ::placeholder {
+    color: black;
+    opacity: 1;
+  }
+
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  .filter-div {
+    margin-top: 25px;
+  }
+
+  .row {
+    width: 330px;
+    grid-gap: 15px;
+  }
+
+  .button-div {
+    margin-top: 40px;
+  }
+
+  // .button {
+  //   border: none;
+  //   border-radius: 4px;
+  //   background-color: #dedaf3;
+  //   color: black;
+  //   font-size: 15px;
+  //   padding: 8px;
+  //   height: 40px;
+  //   text-align: center;
+  //   width: 200px;
+  // }
+
+  .btn {
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-style: "Montserrat";
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+    height: 50px;
+    text-align: center;
+    width: 180px;
+    margin: auto;
+    box-shadow: 5px 5px 5px grey;
+    margin-top: 20px;
+    // #b2bce0;
+  }
+
+  .halfway-button{
+    text-align: center;
+    margin: auto;
+  }
+
+  .mapboxgl-ctrl-geocoder {
+    max-width: none;
+    width: 100%;
+    height: 45px;
+    border: 1px solid lightgrey;
+    box-shadow: none;
+    background-color:#dedaf3;
+    color: grey;
+    border-radius: 10px;
+  }
+
+  .venues_address1 {
+    position: relative;
+    z-index: 1000;
+  }
+
+  // .address-one{
+  //   position: relative;
+  //   z-index: -1;
+  // }
+
+  // .mb-3.string.required.venues_address2 {
+  // color: grey;
+  // }
+
+  // .mapboxgl-ctrl-geocoder--input {
+  //   // position: relative;
+  //   // z-index: -1;
+  // }
+
+  .mapboxgl-ctrl-geocoder--icon.mapboxgl-ctrl-geocoder--icon-search{
+    // display: none;
+    // background-image: url("img/address_marker.jpg");
+  }
+
+  #filter-text{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Nunito", "Helvetica", "sans-serif";
+    line-height: 1.2;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .mobile-positioning-home {
+    margin-top: -20px;
+  }
+}
+
+
+
+// @media screen and (max-width: 720px) and (min-width: 480px){
+// display: ;
+// }
