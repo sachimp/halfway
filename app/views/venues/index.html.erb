@@ -2,56 +2,58 @@
 <!--take the card product from le wagon -->
 <!--within the product card need to add extra features like ratings,icons -->
 
-<div class="mapbox-container">
-  <div class="mapbox", style="width: 100%; height: 350px;"
-    data-controller="mapbox"
-    data-mapbox-markers-value="<%= @markers.to_json %>"
-    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-</div>
-
-<div class="cards-container">
-  <% @venues.all.each do |venue| %>
-    <%= link_to venue_path(venue) do %>
-    <div class="card-product">
-      <img src="<%=venue.image_url%>"/>
-      <div class="card-product-infos">
-        <h2><%= venue.name %></h2>
-        <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
-
-          <p><%= "⭐️" * (venue.rating || 0) %></p>
-
-          <p><%= "£" * venue.price_range %></strong></p>
-<!--
-        <div class="icons">
-          <div class="d-flex justify-content-right">
-            <%= link_to "", "/", class: "fas fa-share-square big-icon" %>
-            <% if Favourite.exists?(venue_id: venue.id) %>
-              <%= link_to "", favourite_path(venue.favourites.first), method: :delete, class: "fas fa-heart"%>
-            <% else %>
-              <%= link_to "", favourites_path(venue.id), method: :post, class: "far fa-heart big-icon", :remote => true %>
-            <% end %>
-          </div>
-       </div>
--->
-
-        <div class="share-icon">
-          <div class="d-flex justify-content-right">
-            <%= link_to "", "/", class: "fas fa-share-square big-icon" %>
-          </div>
-       </div>
-
-       <div class="heart-icon">
-        <% if Favourite.exists?(venue_id: venue.id) %>
-              <%= link_to "", favourite_path(venue.favourites.first), method: :delete, class: "fas fa-heart"%>
-            <% else %>
-              <%= link_to "", favourites_path(venue.id), method: :post, class: "far fa-heart big-icon", :remote => true %>
-            <% end %>
-       </div>
-
-
-      </div>
+<div class="mapbox-wrapper">
+  <div class="mapbox-container">
+    <div class="mapbox", style="width: 100%; height: 350px;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+  </div>
+
+  <div class="cards-container">
+    <% @venues.all.each do |venue| %>
+      <%= link_to venue_path(venue) do %>
+      <div class="card-product">
+        <img src="<%=venue.image_url%>"/>
+        <div class="card-product-infos">
+          <h2><%= venue.name %></h2>
+          <p><i class="fas fa-map-marker-alt"></i> <%= venue.address %></p>
+
+            <p><%= "⭐️" * (venue.rating || 0) %></p>
+
+            <p><%= "£" * venue.price_range %></strong></p>
+  <!--
+          <div class="icons">
+            <div class="d-flex justify-content-right">
+              <%= link_to "", "/", class: "fas fa-share-square big-icon" %>
+              <% if Favourite.exists?(venue_id: venue.id) %>
+                <%= link_to "", favourite_path(venue.favourites.first), method: :delete, class: "fas fa-heart"%>
+              <% else %>
+                <%= link_to "", favourites_path(venue.id), method: :post, class: "far fa-heart big-icon", :remote => true %>
+              <% end %>
+            </div>
+        </div>
+  -->
+
+          <div class="share-icon">
+            <div class="d-flex justify-content-right">
+              <%= link_to "", "/", class: "fas fa-share-square big-icon" %>
+            </div>
+        </div>
+
+        <div class="heart-icon">
+          <% if Favourite.exists?(venue_id: venue.id) %>
+                <%= link_to "", favourite_path(venue.favourites.first), method: :delete, class: "fas fa-heart"%>
+              <% else %>
+                <%= link_to "", favourites_path(venue.id), method: :post, class: "far fa-heart big-icon", :remote => true %>
+              <% end %>
+        </div>
+
+
+        </div>
+      </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>

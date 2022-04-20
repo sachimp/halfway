@@ -2,13 +2,37 @@
   color: black;
   text-decoration: none;
 }
-.mapboxgl-control-container {
-  display: none;
-}
+
 
 .card-product {
   height: 100px;
   img {
     height: 150px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .mapbox-wrapper{
+    display: flex;
+  }
+
+  .mapbox-container{
+    flex: 1;
+    height: 100vh;
+    // align-items: center;
+    // justify-content: center;
+    // position: relative;
+    // width:100%;
+    // height:auto;
+    // flex-grow: 100;
+  }
+
+  .cards-container{
+    flex: 0 0 390px;
+    height: 100vh;
+  }
+
+  .mapbox{
+    height: 100vh !important;
   }
 }
