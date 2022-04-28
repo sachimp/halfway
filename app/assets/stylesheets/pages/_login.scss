@@ -1,0 +1,32 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form, .login-form a {
+  color: white;
+}
+
+.form-label, h2 {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.login-form h2 {
+  font-size: 42px;
+  border-bottom: 2px dashed lightgray;
+  padding-bottom: 20px;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.form-check {
+  margin: 0;
+}
