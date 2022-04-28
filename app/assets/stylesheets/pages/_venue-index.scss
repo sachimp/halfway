@@ -14,17 +14,12 @@
 @media screen and (min-width: 768px){
   .mapbox-wrapper{
     display: flex;
+    flex-direction: row-reverse;
   }
 
   .mapbox-container{
     flex: 1;
     height: 100vh;
-    // align-items: center;
-    // justify-content: center;
-    // position: relative;
-    // width:100%;
-    // height:auto;
-    // flex-grow: 100;
   }
 
   .cards-container{
