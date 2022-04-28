@@ -5,6 +5,12 @@
   height: 100vh;
 }
 
-.login-form {
+.login-form, .login-form a {
+  color: white;
+}
 
+.form-label, h2 {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
 }
