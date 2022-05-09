@@ -27,7 +27,7 @@
         <%= f.input :address1,
           placeholder: "Address 1", label: false,
           input_html: { data: { geocoder_target: "address" }, class: "d-none" },
-          wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
+          wrapper_html: { class: "address-field", data: { controller: "geocoder", geocoder_api_key_value: 'pk.eyJ1Ijoic2FjaGltcCIsImEiOiJja3o4bTg5eGQxa2owMndyeHZhamEwYTB4In0.NEtS_jJ9WE8Pz0uCVoXzzw' } } %>
 
         <%= f.input :address2,
             placeholder: "Address 2", label: false,
